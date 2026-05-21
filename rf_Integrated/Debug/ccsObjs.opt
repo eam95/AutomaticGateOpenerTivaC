@@ -1,0 +1,10 @@
+"./LCD.obj"
+"./PLL.obj"
+"./SSI2.obj"
+"./Timer0A.obj"
+"./Timer3A.obj"
+"./UART.obj"
+"./main.obj"
+"./tm4c123gh6pm_startup_ccs.obj"
+"../tm4c123gh6pm.cmd"
+-llibc.a
