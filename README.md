@@ -18,10 +18,29 @@ The Architecture setup for the project is shown in the block diagram at a high-l
 ![Gate Opener](/docs/images/HighLevelGateOpener.png)
 *Figure 1: High-level overview of the project functionality.*
 
-The Qia Chip RF module consit of the remote controller, and receiver that consit of the "ON"/"OFF" button where it will indicate open/close the gate. When command is received to open/close the gate the logic state is read by the MCU to determine whether to open or close the gate. 
+The Qia Chip RF module consist of the receiver, and remote controller with "ON"/"OFF" button where it will indicate open/close the gate. When command is received to open/close the gate, the receiver sends a logic state to the MCU to determine whether to open or close the gate. 
 
 ![Gate Opener](/docs/images/QiaChipReceiver.png)
 *Figure 2: The Qia Chip receiver.*
 
 ![Gate Opener](/docs/images/QiaChipRemote.png)
 *Figure 3: The Qia Chip remote controller.*
+
+To indicate the status and state of the gate opener a LCD display prints a message when a the gate is open, opening, closed, closing, or obstacle. These states will be determined based on the remote controller and the ultra sonic sensor readings(measured in all states) on the gate path. The ultra sonic sensor is used to measure the distance from the end effector of the gate to the wall to determine if its either fully open/closed, or it is opening/closing. During the opening and closing state the distance measured is displayed on the status LCD. To determine an obstacle has moved into the get path, the difference between last measured position and current position is calculated, where a small displacement indicates on object is in the path whereas a large displacement indicate an obstacle is in the path. The setup of the gate and ultra sonic sensor is shown below along with the range of the states the gate is in.
+
+![Gate Opener](/docs/images/obstacleDetector.png)
+*Figure 4: The boundaries of the gate opener and includes the range of the gate opener states.*
+
+
+## Test Run
+
+A small 4 minute video demonstrating the gate opener in action.
+
+Will upload soon....
+
+
+
+## Key Challenges
+
+Most of the time the gate opener was able to respond to the respond based on the remote controller logic state, and readings from the ultra-sonic. However, there were  
+
