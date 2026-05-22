@@ -44,7 +44,7 @@ Will upload soon....
 
 Most of the time the gate opener was able to respond to the respond based on the remote controller logic state, and readings from the ultra-sonic. However, there were some challenges encountered as it will be discuss on each section below.
 
-**Stationary Object Detection **
+**Stationary Object Detection**
     Although it is able to detect an object momentarily and reopen the gate until it object is removed, the algorithm setup suffers on stationary objects. When an object is placed over a longer period of time, the displacement algorithm will think there is no object ahead due to the displacement measurement being small where it assumes that there is no object while the gate is closing. A potential solution is place a magnet at the wall and the hall effect sensor at the end of the gate, for detection of an object or wall. To safety proof it, it must be in the open state in order to check if the distance measured is equivalent to the distance when the gate is fully open as reference. 
 
 
